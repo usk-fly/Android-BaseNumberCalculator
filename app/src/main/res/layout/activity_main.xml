@@ -25,7 +25,9 @@
                 android:id="@+id/buttonHex"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:background="@color/colorBase"
                 android:text="HEX"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -46,7 +48,9 @@
                 android:id="@+id/buttonDec"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:background="@color/colorBase"
                 android:text="DEC"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -68,7 +72,9 @@
                 android:id="@+id/buttonOct"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:background="@color/colorBase"
                 android:text="OCT"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -88,7 +94,9 @@
                 android:id="@+id/buttonBin"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:background="@color/colorBase"
                 android:text="BIN"
+                android:textColor="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -269,17 +277,23 @@
                 <Button
                     android:id="@+id/buttonAC"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:background="@color/colorClear"
                     android:text="AC"
+                    android:textColor="#FFFFFF"
                     android:textSize="36sp" />
 
                 <Button
                     android:id="@+id/buttonDel"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:background="@color/colorClear"
                     android:text="DEL"
+                    android:textColor="#FFFFFF"
                     android:textSize="30sp" />
 
             </TableRow>

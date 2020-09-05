@@ -151,15 +151,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setIsEnabled() {
+        buttonHex.setBackgroundResource(R.color.colorBase)
+        buttonDec.setBackgroundResource(R.color.colorBase)
+        buttonOct.setBackgroundResource(R.color.colorBase)
+        buttonBin.setBackgroundResource(R.color.colorBase)
+
         when(selectedBase){
             BASE_DEC ->{
-                setColor(buttonHex, false)
+                buttonDec.setBackgroundResource(R.color.colorSelectedBase)
+
                 setColor(textViewHex, false)
-                setColor(buttonDec, true)
                 setColor(textViewDec, true)
-                setColor(buttonOct, false)
                 setColor(textViewOct, false)
-                setColor(buttonBin, false)
                 setColor(textViewBin, false)
 
                 button2.isEnabled = true
@@ -178,13 +181,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 buttonF.isEnabled = false
             }
             BASE_OCT ->{
-                setColor(buttonHex, false)
+                buttonOct.setBackgroundResource(R.color.colorSelectedBase)
+
                 setColor(textViewHex, false)
-                setColor(buttonDec, false)
                 setColor(textViewDec, false)
-                setColor(buttonOct, true)
                 setColor(textViewOct, true)
-                setColor(buttonBin, false)
                 setColor(textViewBin, false)
 
                 button2.isEnabled = true
@@ -203,13 +204,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 buttonF.isEnabled = false
             }
             BASE_BIN ->{
-                setColor(buttonHex, false)
+                buttonBin.setBackgroundResource(R.color.colorSelectedBase)
+
                 setColor(textViewHex, false)
-                setColor(buttonDec, false)
                 setColor(textViewDec, false)
-                setColor(buttonOct, false)
                 setColor(textViewOct, false)
-                setColor(buttonBin, true)
                 setColor(textViewBin, true)
 
                 button2.isEnabled = false
@@ -228,13 +227,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 buttonF.isEnabled = false
             }
             else ->{
-                setColor(buttonHex, true)
+                buttonHex.setBackgroundResource(R.color.colorSelectedBase)
+
                 setColor(textViewHex, true)
-                setColor(buttonDec, false)
                 setColor(textViewDec, false)
-                setColor(buttonOct, false)
                 setColor(textViewOct, false)
-                setColor(buttonBin, false)
                 setColor(textViewBin, false)
 
                 button2.isEnabled = true
