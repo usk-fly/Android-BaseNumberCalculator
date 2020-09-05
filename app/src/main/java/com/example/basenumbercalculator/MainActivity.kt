@@ -137,6 +137,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             BASE_BIN ->{
                 textViewDec.text = converter.binToDec(textViewBin.text.toString())
+                textViewBin.text = converter.decToBin(textViewDec.text.toString())  // Recalculate for Zero format.
                 textViewHex.text = converter.decToHex(textViewDec.text.toString())
                 textViewOct.text = converter.decToOct(textViewDec.text.toString())
             }

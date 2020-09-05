@@ -68,11 +68,12 @@ class BaseConverter {
             return ""
         }
 
+        val numbers = value.replace(" ", "")
         var sum = 0
-        for(i in value.indices){
-            val digits = (value.length - 1) - i
+        for(i in numbers.indices){
+            val digits = (numbers.length - 1) - i
             val e = base.toDouble().pow(digits).toInt()
-            val c = toDecNumber(value.substring(i, i+1)).toInt()
+            val c = toDecNumber(numbers.substring(i, i+1)).toInt()
             sum += c * e
         }
         return sum.toString()
