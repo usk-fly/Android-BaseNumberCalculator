@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         textViewHex.text = "0"
         textViewDec.text = "0"
         textViewOct.text = "0"
-        textViewBin.text = "0000"
+        textViewBin.text = "0000 0000 0000 0000\n0000 0000 0000 0000"
     }
 
     private fun setIsEnabled() {

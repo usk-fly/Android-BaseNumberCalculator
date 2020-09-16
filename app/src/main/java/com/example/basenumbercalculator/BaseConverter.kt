@@ -14,19 +14,24 @@ class BaseConverter {
     fun decToBin(value: String):String{
         var temp = decTo(value, 2)
 
-        when(temp.length % 4){
-            1 -> temp = "000$temp"
-            2 -> temp = "00$temp"
-            3 -> temp = "0$temp"
-        }
+        temp = "00000000000000000000000000000000$temp".takeLast(32)
+        val top = temp.take(16)
+        val last = temp.takeLast(16)
 
         var ret = ""
-        val count = temp.length / 4
-        for(i in 0 until count){
-            ret += " " + temp.substring(i * 4, i * 4 + 4)
+        temp = ""
+        for(i in 0 until 4){
+            temp += " " + top.substring(i * 4, i * 4 + 4)
         }
+        ret = "${temp.trimStart()}\n"
 
-        return ret.trimStart()
+        temp = ""
+        for(i in 0 until 4){
+            temp += " " + last.substring(i * 4, i * 4 + 4)
+        }
+        ret = "$ret${temp.trimStart()}"
+
+        return ret
     }
 
     fun hexToDec(value: String):String{
@@ -68,7 +73,7 @@ class BaseConverter {
             return ""
         }
 
-        val numbers = value.replace(" ", "")
+        val numbers = value.replace(" ", "").replace("\n", "")
         var sum = 0
         for(i in numbers.indices){
             val digits = (numbers.length - 1) - i
